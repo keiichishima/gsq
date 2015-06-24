@@ -17,6 +17,7 @@ setup(name='gsq',
       long_description=read_md('README.md'),
       author='Keiichi SHIMA',
       author_email='keiichi@iijlab.net',
+      url='https://github.com/keiichishima/gsq/',
       packages=['gsq'],
       install_requires=['scipy>=0.15.1','numpy>=1.9.2'],
       classifiers=[
