@@ -9,8 +9,8 @@ from __future__ import print_function
 
 import logging
 
-from binary import g_square_bin
-from discrete import g_square_dis
+from .binary import g_square_bin
+from .discrete import g_square_dis
 
 _logger = logging.getLogger(__name__)
 
