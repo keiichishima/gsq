@@ -36,7 +36,7 @@ def g_square_dis(dm, x, y, s, levels):
     """
 
     def _calculate_tlog(x, y, s, dof, levels, dm):
-        prod_levels = np.prod(map(lambda x: levels[x], s))
+        prod_levels = np.prod(list(map(lambda x: levels[x], s)))
         nijk = np.zeros((levels[x], levels[y], prod_levels))
         s_size = len(s)
         z = []
@@ -52,7 +52,7 @@ def g_square_dis(dm, x, y, s, levels):
                 if s_index == 0:
                     k_index += dm[row_index, z[s_index]]
                 else:
-                    lprod = np.prod(map(lambda x: levels[x], z[:s_index]))
+                    lprod = np.prod(list(map(lambda x: levels[x], z[:s_index])))
                     k_index += (dm[row_index, z[s_index]] * lprod)
                     pass
                 pass
@@ -79,7 +79,7 @@ def g_square_dis(dm, x, y, s, levels):
     row_size = dm.shape[0]
     s_size = len(s)
     dof = ((levels[x] - 1) * (levels[y] - 1)
-           * np.prod(map(lambda x: levels[x], s)))
+           * np.prod(list(map(lambda x: levels[x], s))))
     _logger.debug('dof = %d' % dof)
     if row_size < 10 * dof:
         _logger.warning('Not enough samples. %s is too small.'
