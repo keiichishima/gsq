@@ -160,7 +160,12 @@ def g_square_dis(dm, x, y, s, levels):
     # _logger.debug('tlog = %s' % tlog)
     # _logger.debug('log(tlog) = %s' % log_tlog)
     _logger.debug('G2 = %f' % G2)
-    p_val = chi2.sf(G2, dof)
+    if dof == 0:
+        # dof can be 0 when levels[x] or levels[y] is 1, which is
+        # the case that the values of columns x or y are all 0.
+        p_val = 1
+    else:
+        p_val = chi2.sf(G2, dof)
     _logger.info('p_val = %s' % str(p_val))
     return p_val
 
