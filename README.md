@@ -24,5 +24,5 @@ Please submit bug reports or patches through the GitHub interface.
 ## Author
 
 Keiichi SHIMA
-IIJ Innovation Institute Inc.
-WIDE project
+/ IIJ Innovation Institute Inc.
+/ WIDE project
