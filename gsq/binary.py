@@ -72,7 +72,6 @@ def g_square_bin(dm, x, y, s):
     row_size = dm.shape[0]
     s_size = len(s)
     dof = int(pow(2, s_size))
-    _logger.debug('dof = %d' % dof)
     if row_size < 10 * dof:
         _logger.warning('Not enough samples.  %s is too small.'
                         % str(row_size))
@@ -147,9 +146,10 @@ def g_square_bin(dm, x, y, s):
         pass
     log_tlog = np.log(tlog)
     G2 = np.nansum(2 * nijk * log_tlog)
-    _logger.debug('nijk = %s' % nijk)
-    _logger.debug('tlog = %s' % tlog)
-    _logger.debug('log(tlog) = %s' % log_tlog)
+    # _logger.debug('dof = %d' % dof)
+    # _logger.debug('nijk = %s' % nijk)
+    # _logger.debug('tlog = %s' % tlog)
+    # _logger.debug('log(tlog) = %s' % log_tlog)
     _logger.debug('G2 = %f' % G2)
     p_val = chi2.sf(G2, dof)
     _logger.info('p_val = %s' % str(p_val))

@@ -80,7 +80,6 @@ def g_square_dis(dm, x, y, s, levels):
     s_size = len(s)
     dof = ((levels[x] - 1) * (levels[y] - 1)
            * np.prod(list(map(lambda x: levels[x], s))))
-    _logger.debug('dof = %d' % dof)
     if row_size < 10 * dof:
         _logger.warning('Not enough samples. %s is too small.'
                         % str(row_size))
@@ -156,9 +155,10 @@ def g_square_dis(dm, x, y, s, levels):
         pass
     log_tlog = np.log(tlog)
     G2 = np.nansum(2 * nijk * log_tlog)
-    _logger.debug('nijk = %s' % nijk)
-    _logger.debug('tlog = %s' % tlog)
-    _logger.debug('log(tlog) = %s' % log_tlog)
+    # _logger.debug('dof = %d' % dof)
+    # _logger.debug('nijk = %s' % nijk)
+    # _logger.debug('tlog = %s' % tlog)
+    # _logger.debug('log(tlog) = %s' % log_tlog)
     _logger.debug('G2 = %f' % G2)
     p_val = chi2.sf(G2, dof)
     _logger.info('p_val = %s' % str(p_val))
