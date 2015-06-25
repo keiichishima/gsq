@@ -12,7 +12,7 @@ except ImportError:
     read_md = lambda f: open(f, 'r').read()
 
 setup(name='gsq',
-      version='0.1.4',
+      version='0.1.5',
       description='G Square Conditional Independence Test',
       long_description=read_md('README.md'),
       author='Keiichi SHIMA',
