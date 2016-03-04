@@ -72,9 +72,10 @@ def g_square_bin(dm, x, y, s):
     row_size = dm.shape[0]
     s_size = len(s)
     dof = int(pow(2, s_size))
-    if row_size < 10 * dof:
-        _logger.warning('Not enough samples.  %s is too small.'
-                        % str(row_size))
+    row_size_required = 10 * dof
+    if row_size < row_size_required:
+        _logger.warning('Not enough samples. %s is too small. Need %s.'
+                        % (str(row_size), str(row_size_required)))
         return 1
     nijk = None
     if s_size < 6:

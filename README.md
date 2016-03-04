@@ -21,6 +21,10 @@ The source code is available at https://github.com/keiichishima/gsq
 
 Please submit bug reports or patches through the GitHub interface.
 
+## Contributors
+
+- Joost H. van der Linden, https://github.com/joosthvanderlinden
+
 ## Author
 
 Keiichi SHIMA
