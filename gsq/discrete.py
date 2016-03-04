@@ -80,9 +80,10 @@ def g_square_dis(dm, x, y, s, levels):
     s_size = len(s)
     dof = ((levels[x] - 1) * (levels[y] - 1)
            * np.prod(list(map(lambda x: levels[x], s))))
-    if row_size < 10 * dof:
-        _logger.warning('Not enough samples. %s is too small.'
-                        % str(row_size))
+    row_size_required = 10 * dof
+    if row_size < row_size_required:
+        _logger.warning('Not enough samples. %s is too small. Need %s.'
+                        % (str(row_size), str(row_size_required)))
         return 1
     nijk = None
     if s_size < 5:
