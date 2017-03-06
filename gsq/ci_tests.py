@@ -14,7 +14,7 @@ from .discrete import g_square_dis
 
 _logger = logging.getLogger(__name__)
 
-def ci_test_bin(data_matrix, x, y, s):
+def ci_test_bin(data_matrix, x, y, s, **kwargs):
     return g_square_bin(data_matrix, x, y, s)
 
 def ci_test_dis(data_matrix, x , y, s, **kwargs):
