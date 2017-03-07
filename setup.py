@@ -12,14 +12,14 @@ except ImportError:
     read_md = lambda f: open(f, 'r').read()
 
 setup(name='gsq',
-      version='0.1.5',
+      version='0.1.6',
       description='G Square Conditional Independence Test',
       long_description=read_md('README.md'),
       author='Keiichi SHIMA',
       author_email='keiichi@iijlab.net',
       url='https://github.com/keiichishima/gsq/',
       packages=['gsq'],
-      install_requires=['scipy>=0.15.1','numpy>=1.9.2'],
+      install_requires=['scipy>=0.18.1','numpy>=1.12.0'],
       classifiers=[
           'Development Status :: 4 - Beta',
           'Environment :: Console',

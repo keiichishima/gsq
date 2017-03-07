@@ -24,6 +24,7 @@ Please submit bug reports or patches through the GitHub interface.
 ## Contributors
 
 - Joost H. van der Linden, https://github.com/joosthvanderlinden
+- Satoru Kobayashi, https://github.com/cpflat
 
 ## Author
 
